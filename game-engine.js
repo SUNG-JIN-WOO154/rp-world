@@ -1,6 +1,6 @@
 const defaultState = {
   player: {
-    name: 'Astra',
+    name: 'Aventurier',
     hp: 100,
     maxHp: 100,
     energy: 100,
@@ -200,7 +200,19 @@ function renderScene() {
   ui.exp.textContent = `${p.xp}/100`;
   ui.gold.textContent = p.gold;
   ui.reputation.textContent = p.reputation;
-  ui.storyImage.style.background = scene.image || 'linear-gradient(...)';
+
+  if (scene.imageUrl && scene.imageUrl.trim()) {
+    ui.storyImage.style.backgroundImage = `url('${scene.imageUrl}')`;
+    ui.storyImage.style.backgroundSize = 'cover';
+    ui.storyImage.style.backgroundPosition = 'center';
+    ui.storyImage.style.backgroundRepeat = 'no-repeat';
+  } else if (scene.image) {
+    ui.storyImage.style.background = scene.image;
+    ui.storyImage.style.backgroundImage = 'none';
+  } else {
+    ui.storyImage.style.background = 'linear-gradient(135deg, rgba(100, 20, 20, 0.8), rgba(20, 5, 10, 0.95))';
+    ui.storyImage.style.backgroundImage = 'none';
+  }
 
   if (scene.context) {
     ui.contextText.textContent = scene.context;
