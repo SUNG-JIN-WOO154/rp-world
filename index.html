@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RP World - L'Aventure Commence</title>
+    <title>RP World - Anos L'Aventurier</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,8 +13,11 @@
         <div class="glow-background"></div>
         
         <div class="title-section">
+            <div class="avatar-hero">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='grad1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23ff1744;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%234d0033;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='100' cy='100' r='95' fill='none' stroke='url(%23grad1)' stroke-width='3'/%3E%3Ccircle cx='100' cy='100' r='90' fill='%230a0a1f' opacity='0.8'/%3E%3Ctext x='100' y='120' font-family='Arial' font-size='36' font-weight='bold' fill='%23ff1744' text-anchor='middle'%3EANOS%3C/text%3E%3C/svg%3E" alt="Anos" class="avatar-img">
+            </div>
             <h1 class="neon-title">RP WORLD</h1>
-            <p class="subtitle">Bienvenue dans un univers d'aventures infinies</p>
+            <p class="subtitle">Bienvenue Anos - L'Aventurier du Monde Brisé</p>
         </div>
         
         <div class="menu-section">
@@ -25,7 +28,8 @@
         </div>
         
         <div class="footer-info">
-            <p>Plongez dans un monde persistant rempli de mystères, de dangers et de gloire</p>
+            <p>Tu es Anos, l'aventurier. Ce monde n'est qu'un jeu pour toi.</p>
+            <p>Plongez dans un univers persistant rempli de mystères, de dangers et de gloire</p>
         </div>
     </div>
 
@@ -34,9 +38,9 @@
         
         <div class="top-bar">
             <div class="character-info">
-                <div class="character-avatar"></div>
+                <div class="character-avatar anos-avatar">ANOS</div>
                 <div class="character-stats">
-                    <h2 id="charName">Personnage</h2>
+                    <h2 id="charName">Anos</h2>
                     <div class="stat-bar">
                         <span>PV:</span>
                         <div class="bar">
@@ -86,14 +90,14 @@
                     <h2 id="storyTitle">Titre de l'aventure</h2>
                     <p id="storyContent">Contenu de l'histoire...</p>
                     <div id="contextBox" class="context-box hidden">
-                        <h3>Informations</h3>
+                        <h3>💡 Informations</h3>
                         <p id="contextText"></p>
                     </div>
                 </div>
             </div>
 
             <div class="inventory-panel">
-                <div class="panel-header">INVENTAIRE</div>
+                <div class="panel-header">⚔️ INVENTAIRE</div>
                 <div id="inventoryList" class="inventory-grid">
                     <!-- Les objets apparaîtront ici -->
                 </div>
@@ -105,7 +109,7 @@
         </div>
 
         <div class="choices-section">
-            <div class="choices-title">CHOIX DISPONIBLES</div>
+            <div class="choices-title">⚡ CHOIX DISPONIBLES</div>
             <div id="choicesContainer" class="choices-grid">
                 <!-- Les choix apparaîtront ici -->
             </div>
@@ -130,5 +134,6 @@
 
     <script src="game-engine.js"></script>
     <script src="scenarios.js"></script>
+    <script src="scenarios-advanced.js"></script>
 </body>
 </html>

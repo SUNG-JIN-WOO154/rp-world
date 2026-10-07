@@ -1,0 +1,62 @@
+.anos-avatar {
+  background: linear-gradient(135deg, rgba(255, 23, 68, 0.95), rgba(77, 0, 51, 0.95)) !important;
+  border: 3px solid #ff1744 !important;
+  box-shadow: 0 0 30px rgba(255, 23, 68, 0.8), inset 0 0 20px rgba(255, 23, 68, 0.3) !important;
+  font-size: 18px !important;
+  font-weight: 900 !important;
+  letter-spacing: 2px !important;
+  color: #ff1744 !important;
+  text-shadow: 0 0 10px rgba(255, 23, 68, 0.8) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.anos-avatar::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 2px,
+    rgba(255, 23, 68, 0.1) 2px,
+    rgba(255, 23, 68, 0.1) 4px
+  );
+  animation: flicker 0.15s infinite;
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+.avatar-hero {
+  margin: 0 auto 30px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 23, 68, 0.2), rgba(77, 0, 51, 0.8));
+  border: 3px solid #ff1744;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 40px rgba(255, 23, 68, 0.6), inset 0 0 30px rgba(255, 23, 68, 0.2);
+  animation: pulse-anos 2s ease-in-out infinite;
+}
+
+@keyframes pulse-anos {
+  0%, 100% {
+    box-shadow: 0 0 40px rgba(255, 23, 68, 0.6), inset 0 0 30px rgba(255, 23, 68, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 60px rgba(255, 23, 68, 0.8), inset 0 0 40px rgba(255, 23, 68, 0.3);
+  }
+}
+
+.avatar-img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: contain;
+  filter: drop-shadow(0 0 10px rgba(255, 23, 68, 0.6));
+}
